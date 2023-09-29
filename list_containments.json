@@ -1,0 +1,140 @@
+/usr/local/bin/python3.11 /Applications/PyCharm CE.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py --multiprocess --qt-support=auto --client 127.0.0.1 --port 51974 --file /Users/scottbianco/Library/CloudStorage/Dropbox/STELLAR/pycharm_projects/stellar_response_4.2.5/modules/endpoint/fireeye_trellix_responder.py -s hexmzd572-hx-webui-1.hex01.helix.apps.fireeye.com -u david.white@wipro.com -p @zU0&9D0rny&RRtj -a list_containments -i blahblah
+Connected to pydev debugger (build 223.8214.51)
+{
+    "_id": "GIt0mRoUgO3f09IJyrLQ4k",
+    "last_sysinfo": "2023-03-31T15:15:25.996Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-14T14:34:00.221Z",
+    "url": "/hx/api/v3/hosts/GIt0mRoUgO3f09IJyrLQ4k"
+}
+{
+    "_id": "D7bjjZoXsPeb8NEm7unRHt",
+    "last_sysinfo": "2023-03-31T15:15:15.991Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-14T14:33:35.234Z",
+    "url": "/hx/api/v3/hosts/D7bjjZoXsPeb8NEm7unRHt"
+}
+{
+    "_id": "qX0TT5g60X8eHz0FOpE6wI",
+    "last_sysinfo": "2023-03-31T15:15:40.005Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-14T14:33:25.228Z",
+    "url": "/hx/api/v3/hosts/qX0TT5g60X8eHz0FOpE6wI"
+}
+{
+    "_id": "0cvSgsoe5UdfVrBLFDHXdK",
+    "last_sysinfo": "2023-03-31T15:14:10.997Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-13T20:58:33.365Z",
+    "url": "/hx/api/v3/hosts/0cvSgsoe5UdfVrBLFDHXdK"
+}
+{
+    "_id": "O3eimD5qaO8edcCqqQDC4E",
+    "last_sysinfo": "2023-03-31T15:14:10.997Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-13T20:58:28.384Z",
+    "url": "/hx/api/v3/hosts/O3eimD5qaO8edcCqqQDC4E"
+}
+{
+    "_id": "2LdalMhHAbbgtRlcgH5aF8",
+    "last_sysinfo": "2023-03-31T15:44:23.774Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-13T20:58:18.467Z",
+    "url": "/hx/api/v3/hosts/2LdalMhHAbbgtRlcgH5aF8"
+}
+{
+    "_id": "TjR2ljPmVthcMNUBHI5ZQp",
+    "last_sysinfo": "2023-03-31T15:14:20.992Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-13T20:54:02.665Z",
+    "url": "/hx/api/v3/hosts/TjR2ljPmVthcMNUBHI5ZQp"
+}
+{
+    "_id": "iXOeJlDNSheex00xSrUmb4",
+    "last_sysinfo": "2023-03-31T15:15:06.009Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-13T20:53:52.699Z",
+    "url": "/hx/api/v3/hosts/iXOeJlDNSheex00xSrUmb4"
+}
+{
+    "_id": "T8PafkjTe3acVbzTe9GDg4",
+    "last_sysinfo": "2023-03-31T15:14:05.997Z",
+    "requested_by_actor": null,
+    "requested_on": null,
+    "contained_by_actor": null,
+    "contained_on": null,
+    "queued": false,
+    "excluded": false,
+    "missing_software": false,
+    "reported_clone": false,
+    "state": "normal",
+    "state_update_time": "2023-03-13T20:18:46.151Z",
+    "url": "/hx/api/v3/hosts/T8PafkjTe3acVbzTe9GDg4"
+}
+{'result_msg': 'Azure AD responder action success'}
+
+Process finished with exit code 0

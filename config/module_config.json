@@ -1,0 +1,1424 @@
+{
+    "ad": {
+        "category": "idp",
+        "type": "ad",
+        "display_name": "AD",
+        "fields": [
+            {
+                "field_name": "ad_domain",
+                "display_name": "Active Directory Domain",
+                "type": "text"
+            },
+            {
+                "field_name": "server_addr",
+                "display_name": "Server Host",
+                "type": "text"
+            },
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "protocol_type",
+                "display_name": "Protocol Type",
+                "type": "select",
+                "required": true,
+                "available value": [
+                    "LDAP",
+                    "LDAPS",
+                    "LDAPS (certificate validation disabled)"
+                ],
+                "default": "LDAP"
+            }
+        ],
+        "class_name": "AdConnector",
+        "filepath": "/opt/thirdparty/AD/ad_connector.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "disable_ad_user_by_sid": {
+                "display_name": "Disable User",
+                "unique_key": [
+                    "sid"
+                ],
+                "revert_action_name": "enable_ad_user_by_sid"
+            },
+            "enable_ad_user_by_sid": {
+                "display_name": "Enable User",
+                "unique_key": [
+                    "sid"
+                ],
+                "revert_action_name": "disable_ad_user_by_sid"
+            }
+        }
+    },
+    "aws_firewall": {
+        "category": "firewall",
+        "type": "aws_firewall",
+        "display_name": "AWS",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "Access Key ID",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Secret Key",
+                "type": "password"
+            },
+            {
+                "field_name": "acl_id",
+                "display_name": "ACL ID",
+                "type": "text"
+            },
+            {
+                "field_name": "region_name",
+                "display_name": "Region Name",
+                "type": "text"
+            }
+        ],
+        "class_name": "AwsConnector",
+        "filepath": "/opt/thirdparty/firewall/aws.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "checkpoint_firewall": {
+        "category": "firewall",
+        "type": "checkpoint_firewall",
+        "display_name": "CHECKPOINT",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "domain",
+                "display_name": "Domain",
+                "type": "text"
+            },
+            {
+                "field_name": "policy_name",
+                "display_name": "Policy Package Name",
+                "type": "text"
+            }
+        ],
+        "class_name": "CheckpointConnector",
+        "filepath": "/opt/thirdparty/firewall/checkpoint.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "crowdstrike": {
+        "category": "endpoint",
+        "type": "crowdstrike",
+        "display_name": "CrowdStrike",
+        "fields": [
+            {
+                "field_name": "tenant_id",
+                "display_name": "Tenant ID",
+                "type": "text"
+            },
+            {
+                "field_name": "client_id",
+                "display_name": "Client ID",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Client Secret",
+                "type": "password"
+            }
+        ],
+        "class_name": "CrowdStrikeConnector",
+        "filepath": "/opt/thirdparty/endpoint/crowdstrike_connector.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "contain_host": {
+                "display_name": "Contain Host",
+                "unique_key": [
+                    "cidr"
+                ],
+                "revert_action_name": "lift_host_containment"
+            },
+            "lift_host_containment": {
+                "display_name": "Lift Host Containment",
+                "unique_key": [
+                    "cidr"
+                ],
+                "revert_action_name": "contain_host"
+            },
+            "hide_host": {
+                "display_name": "Hide Host",
+                "unique_key": [
+                    "cidr"
+                ],
+                "revert_action_name": "unhide_host"
+            },
+            "unhide_host": {
+                "display_name": "Unhide Host",
+                "unique_key": [
+                    "cidr"
+                ],
+                "revert_action_name": "hide_host"
+            }
+        }
+    },
+    "fortigate_firewall": {
+        "category": "firewall",
+        "type": "fortigate_firewall",
+        "display_name": "FORTIGATE",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "vdom",
+                "display_name": "Virtual Domain Name",
+                "type": "text"
+            }
+        ],
+        "class_name": "FortigateConnector",
+        "filepath": "/opt/thirdparty/firewall/fortigate.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "sophos_firewall": {
+        "category": "firewall",
+        "type": "sophos_firewall",
+        "display_name": "Sophos XG",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "port",
+                "display_name": "Port",
+                "type": "text"
+            }
+        ],
+        "class_name": "SophosConnector",
+        "filepath": "/opt/thirdparty/firewall/sophos.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "f5_big_ip_firewall": {
+        "category": "firewall",
+        "type": "f5_big_ip_firewall",
+        "display_name": "F5 BIG-IP",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "port",
+                "display_name": "Port",
+                "type": "text"
+            }
+        ],
+        "class_name": "F5Connector",
+        "filepath": "/opt/thirdparty/firewall/f5_big_ip.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "f5_asm": {
+        "category": "firewall",
+        "type": "f5_asm",
+        "display_name": "F5 BIG-IP ASM",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "policy_name",
+                "display_name": "Policy Name",
+                "type": "text"
+            },
+            {
+                "field_name": "port",
+                "display_name": "Port",
+                "type": "text"
+            }
+        ],
+        "class_name": "F5ASMConnector",
+        "filepath": "/opt/thirdparty/firewall/f5_asm.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "f5_silverline": {
+        "category": "firewall",
+        "type": "f5_silverline",
+        "display_name": "F5 Silverline",
+        "fields": [
+            {
+                "field_name": "api_token",
+                "display_name": "API Token",
+                "type": "password"
+            }
+        ],
+        "class_name": "F5SilverlineConnector",
+        "filepath": "/opt/thirdparty/firewall/f5_silverline.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "hillstone_firewall": {
+        "category": "firewall",
+        "type": "hillstone_firewall",
+        "display_name": "HILLSTONE",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "encode_uname",
+                "display_name": "Encode User Name",
+                "type": "checkbox"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text"
+            }
+        ],
+        "class_name": "HillstoneConnector",
+        "filepath": "/opt/thirdparty/firewall/hillstone.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "palo_alto_networks_firewall": {
+        "category": "firewall",
+        "type": "palo_alto_networks_firewall",
+        "display_name": "PALO ALTO NETWORKS",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "vsys",
+                "display_name": "Virtual System Name",
+                "type": "text"
+            }
+        ],
+        "class_name": "PanConnector",
+        "filepath": "/opt/thirdparty/firewall/pan.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "sonicwallcc": {
+        "category": "endpoint",
+        "type": "sonicwallcc",
+        "display_name": "SonicWall Capture Client",
+        "class_name": "SonicwallccConnector",
+        "filepath": "/opt/thirdparty/endpoint/sonicwallcc_connector.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "scan": {
+                "display_name": "Scan Host",
+                "unique_key": [
+                    "device_id",
+                    "install_token"
+                ],
+                "revert_action_name": ""
+            },
+            "disconnect": {
+                "display_name": "Disconnect Host from Network",
+                "unique_key": [
+                    "device_id",
+                    "install_token"
+                ],
+                "revert_action_name": "connect"
+            },
+            "connect": {
+                "display_name": "Connect Host to Network",
+                "unique_key": [
+                    "device_id",
+                    "install_token"
+                ],
+                "revert_action_name": "disconnect"
+            },
+            "restart": {
+                "display_name": "Restart Host",
+                "unique_key": [
+                    "device_id",
+                    "install_token"
+                ],
+                "revert_action_name": ""
+            },
+            "shutdown": {
+                "display_name": "Shut Down Host",
+                "unique_key": [
+                    "device_id",
+                    "install_token"
+                ],
+                "revert_action_name": ""
+            }
+        }
+    },
+    "sonicwall_firewall": {
+        "category": "firewall",
+        "type": "sonicwall_firewall",
+        "display_name": "SONICWALL",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "port",
+                "display_name": "Device Port",
+                "type": "text"
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text"
+            },
+            {
+                "field_name": "external_zone",
+                "display_name": "External Zone",
+                "type": "text"
+            }
+        ],
+        "class_name": "SonicwallConnector",
+        "filepath": "/opt/thirdparty/firewall/sonicwall.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "barracuda_firewall": {
+        "category": "firewall",
+        "type": "barracuda_firewall",
+        "display_name": "BARRACUDA",
+        "fields": [
+            {
+                "field_name": "api_token",
+                "display_name": "API Token",
+                "type": "password"
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text"
+            },
+            {
+                "field_name": "port",
+                "display_name": "Device Port",
+                "type": "text"
+            },
+            {
+                "field_name": "src_object",
+                "display_name": "Source Network Object",
+                "type": "text"
+            },
+            {
+                "field_name": "dst_object",
+                "display_name": "Destination Network Object",
+                "type": "text"
+            }
+        ],
+        "class_name": "BarracudaConnector",
+        "filepath": "/opt/thirdparty/firewall/barracuda.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "ssh_credential": {
+        "category": "remote_host",
+        "type": "ssh_credential",
+        "display_name": "SSH",
+        "fields": [
+            {
+                "field_name": "host",
+                "display_name": "Hostname",
+                "type": "text"
+            },
+            {
+                "field_name": "port",
+                "display_name": "Port",
+                "type": "text"
+            },
+            {
+                "field_name": "user",
+                "display_name": "Username",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            }
+        ],
+        "class_name": "SshConnector",
+        "filepath": "/opt/thirdparty/remote_host/ssh.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "run_command": {
+                "display_name": "Run Remote Script",
+                "unique_key": [
+                    "time_and_cmd_id"
+                ]
+            }
+        }
+    },
+    "cylance": {
+        "category": "endpoint",
+        "type": "cylance",
+        "display_name": "Cylance",
+        "fields": [
+            {
+                "field_name": "service_endpoint_url",
+                "display_name": "Service Endpoint URL",
+                "type": "text"
+            },
+            {
+                "field_name": "tenant_id",
+                "display_name": "Tenant ID",
+                "type": "text"
+            },
+            {
+                "field_name": "app_id",
+                "display_name": "App ID",
+                "type": "text"
+            },
+            {
+                "field_name": "app_secret",
+                "display_name": "App Secret",
+                "type": "password"
+            }
+        ],
+        "class_name": "CylanceConnector",
+        "filepath": "/opt/thirdparty/endpoint/cylance_connector.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "contain_host": {
+                "display_name": "Contain Host",
+                "unique_key": [
+                    "mac",
+                    "hostname",
+                    "device_id"
+                ],
+                "revert_action_name": ""
+            }
+        }
+    },
+    "forescout": {
+        "category": "endpoint",
+        "type": "forescout",
+        "display_name": "Forescout",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "Username",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "app_name",
+                "display_name": "App Name",
+                "type": "text"
+            },
+            {
+                "field_name": "hostname",
+                "display_name": "EM Hostname or IP",
+                "type": "text"
+            },
+            {
+                "field_name": "properties",
+                "display_name": "Properties JSON (optional)",
+                "type": "text",
+                "required": false
+            }
+        ],
+        "class_name": "ForescoutResponder",
+        "filepath": "/opt/thirdparty/endpoint/forescout_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "update_device": {
+                "display_name": "Update Device",
+                "unique_key": [
+                    "mac",
+                    "cidr",
+                    "properties"
+                ],
+                "revert_action_name": ""
+            }
+        }
+    },
+    "sentinelone": {
+        "category": "endpoint",
+        "type": "sentinelone",
+        "display_name": "Sentinelone",
+        "fields": [
+            {
+                "field_name": "host",
+                "display_name": "Host",
+                "type": "text"
+            },
+            {
+                "field_name": "username",
+                "display_name": "Username",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "api_key",
+                "display_name": "API Key",
+                "type": "password"
+            },
+            {
+                "field_name": "auth_method",
+                "display_name": "Auth Method",
+                "type": "text"
+            }
+        ],
+        "class_name": "SentineloneResponder",
+        "filepath": "/opt/thirdparty/endpoint/sentinelone_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "scan": {
+                "display_name": "Scan Agents",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": ""
+            },
+            "kill": {
+                "display_name": "Stop Threats",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": ""
+            },
+            "quarantine": {
+                "display_name": "Quarantine Threats",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": "un_quarantine"
+            },
+            "un_quarantine": {
+                "display_name": "Unquarantine Threats",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": "quarantine"
+            },
+            "remediate": {
+                "display_name": "Remove Threats",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": ""
+            },
+            "rollback_remediation": {
+                "display_name": "Rollback and Remediate",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": ""
+            },
+            "contain_host": {
+                "display_name": "Contain Host",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": "contain_host_revert"
+            },
+            "contain_host_revert": {
+                "display_name": "Uncontain Host",
+                "unique_key": [
+                    "ids"
+                ],
+                "revert_action_name": "contain_host"
+            }
+        }
+    },
+    "azure_ad": {
+        "category": "saas",
+        "type": "azure_ad",
+        "display_name": "Azure Active Directory",
+        "fields": [
+            {
+                "field_name": "client_id",
+                "display_name": "Application ID",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "tenant_id",
+                "display_name": "Directory ID",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password",
+                "required": true
+            }
+        ],
+        "class_name": "AzureADResponder",
+        "filepath": "/opt/thirdparty/saas/azure_ad_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "disable_user": {
+                "display_name": "Disable User",
+                "unique_key": [
+                    "user_principal_name"
+                ],
+                "revert_action_name": "enable_user"
+            },
+            "enable_user": {
+                "display_name": "Enable User",
+                "unique_key": [
+                    "user_principal_name"
+                ],
+                "revert_action_name": "disable_user"
+            }
+        }
+    },
+    "meraki_firewall": {
+        "category": "firewall",
+        "type": "meraki_firewall",
+        "display_name": "Cisco Meraki Firewall",
+        "fields": [
+            {
+                "field_name": "api_key",
+                "display_name": "API Key",
+                "type": "password",
+                "required": true
+            },
+            {
+                "field_name": "oragnization",
+                "display_name": "Organization name",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "network",
+                "display_name": "Network name",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "class_name": "MerakiConnector",
+        "filepath": "/opt/thirdparty/firewall/meraki.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "barracuda_email": {
+        "category": "email",
+        "type": "barracuda_email",
+        "display_name": "Barracuda Email Security",
+        "fields": [
+            {
+                "field_name": "client_id",
+                "display_name": "Client ID",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "client_secret",
+                "display_name": "Client Secret",
+                "type": "password",
+                "required": true
+            }
+        ],
+        "class_name": "BarracudaResponder",
+        "filepath": "/opt/thirdparty/email/barracuda_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "remediate_emails": {
+                "display_name": "Remediate Emails",
+                "unique_key": [
+                    "account_id",
+                    "attachment_name",
+                    "email_subject",
+                    "sender_display_name",
+                    "email_address"
+                ],
+                "revert_action_name": ""
+            }
+        }
+    },
+    "cybereason": {
+        "category": "endpoint",
+        "type": "cybereason",
+        "display_name": "Cybereason",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "Username",
+                "type": "text"
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password"
+            },
+            {
+                "field_name": "server",
+                "display_name": "Server",
+                "type": "text"
+            },
+            {
+                "field_name": "port",
+                "display_name": "Port",
+                "type": "text"
+            }
+        ],
+        "class_name": "CybereasonResponder",
+        "filepath": "/opt/thirdparty/endpoint/cybereason_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "isolate_machine": {
+                "display_name": "Isolate a machine",
+                "unique_key": [
+                    "sensor_id",
+                    "malop_id"
+                ],
+                "revert_action_name": "unisolate_machine"
+            },
+            "unisolate_machine": {
+                "display_name": "Unisolate a machine",
+                "unique_key": [
+                    "sensor_id",
+                    "malop_id"
+                ],
+                "revert_action_name": "isolate_machine"
+            }
+        }
+    },
+    "handreamnet": {
+        "category": "security_switch",
+        "type": "handreamnet",
+        "display_name": "HanDreamnet Security Switch",
+        "fields": [
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "token",
+                "display_name": "Token",
+                "type": "password",
+                "required": true
+            }
+        ],
+        "class_name": "HanDreamnetSwitchConnector",
+        "filepath": "/opt/thirdparty/security_switch/handreamnet.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "cynet": {
+        "category": "endpoint",
+        "type": "cynet",
+        "display_name": "Cynet",
+        "fields": [
+            {
+                "field_name": "host",
+                "display_name": "Host",
+                "type": "text",
+                "required": true,
+                "default": "https://"
+            },
+            {
+                "field_name": "username",
+                "display_name": "Username",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password",
+                "required": true
+            },
+            {
+                "field_name": "client_id",
+                "display_name": "Client ID",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "class_name": "CynetResponder",
+        "filepath": "/opt/thirdparty/endpoint/cynet_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "contain_host": {
+                "display_name": "Contain Host",
+                "unique_key": [
+                    "hostname"
+                ],
+                "revert_action_name": ""
+            },
+            "shutdown_host": {
+                "display_name": "Shutdown Host",
+                "unique_key": [
+                    "hostname"
+                ],
+                "revert_action_name": ""
+            }
+        }
+    },
+    "deep_instinct": {
+        "category": "endpoint",
+        "type": "deep_instinct",
+        "display_name": "Deep Instinct",
+        "fields": [
+            {
+                "field_name": "host",
+                "display_name": "Hostname",
+                "type": "text",
+                "required": true,
+                "tooltip": "Hostname cannot include https"
+            },
+            {
+                "field_name": "api_token",
+                "display_name": "API Token",
+                "type": "password",
+                "required": true
+            }
+        ],
+        "class_name": "DeepInstinctResponder",
+        "filepath": "/opt/thirdparty/endpoint/deep_instinct_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "isolate_machine": {
+                "display_name": "Isolate a machine",
+                "unique_key": [
+                    "device_id"
+                ],
+                "revert_action_name": "unisolate_machine"
+            },
+            "unisolate_machine": {
+                "display_name": "Unisolate a machine",
+                "unique_key": [
+                    "device_id"
+                ],
+                "revert_action_name": "isolate_machine"
+            }
+        }
+    },
+    "cisco_fmc_firewall": {
+        "category": "firewall",
+        "type": "cisco_fmc_firewall",
+        "display_name": "Cisco FMC",
+        "fields": [
+            {
+                "field_name": "username",
+                "display_name": "User Name",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "password",
+                "display_name": "Password",
+                "type": "password",
+                "required": true
+            },
+            {
+                "field_name": "device",
+                "display_name": "Device IP Address",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "src_ip_grp_name",
+                "display_name": "Source IP Group",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "dst_ip_grp_name",
+                "display_name": "Destination IP Group",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "class_name": "CiscoFMCConnector",
+        "filepath": "/opt/thirdparty/firewall/cisco_fmc.py",
+        "connection_test_name": "_test_connection",
+        "actions": {
+            "block_ip": {
+                "display_name": "Block IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "unblock_ip"
+            },
+            "unblock_ip": {
+                "display_name": "Unblock IP",
+                "unique_key": [
+                    "cidr",
+                    "direction"
+                ],
+                "revert_action_name": "block_ip"
+            }
+        }
+    },
+    "bitdefender": {
+        "category": "endpoint",
+        "type": "bitdefender",
+        "display_name": "Bitdefender",
+        "fields": [
+            {
+            "field_name": "access_url",
+            "display_name": "Access URL",
+            "type": "text",
+            "required": true,
+            "default": "https://cloud.gravityzone.bitdefender.com",
+            "backend_validator": "url"
+            },
+            {
+                "field_name": "api_key",
+                "display_name": "API Key",
+                "type": "text",
+                "required": true
+            }
+        ],
+        "class_name": "BitdefenderResponder",
+        "filepath": "/opt/thirdparty/endpoint/bitdefender_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "isolate_machine": {
+                "display_name": "Isolate Endpoint",
+                "unique_key": [
+                    "endpoint_id"
+                ],
+                "revert_action_name": "unisolate_machine"
+            },
+            "unisolate_machine": {
+                "display_name": "Restore Endpoint from Isolation",
+                "unique_key": [
+                    "endpoint_id"
+                ],
+                "revert_action_name": "isolate_machine"
+            }
+        }
+    },
+    "sophos": {
+        "category": "endpoint",
+        "type": "sophos",
+        "display_name": "Sophos",
+        "fields": [
+            {
+                "field_name": "client_id",
+                "display_name": "Client ID",
+                "type": "text",
+                "required": true
+            },
+            {
+                "field_name": "client_secret",
+                "display_name": "Client Secret",
+                "type": "password",
+                "required": true
+            }
+        ],
+        "class_name": "SophosResponder",
+        "filepath": "/opt/thirdparty/endpoint/sophos_responder.py",
+        "connection_test_name": "test_connection",
+        "actions": {
+            "isolate_machine": {
+                "display_name": "Isolate Endpoint",
+                "unique_key": [
+                    "endpoint_id"
+                ],
+                "revert_action_name": "unisolate_machine"
+            },
+            "unisolate_machine": {
+                "display_name": "Restore Endpoint from Isolation",
+                "unique_key": [
+                    "endpoint_id"
+                ],
+                "revert_action_name": "isolate_machine"
+            }
+        }
+    }
+}

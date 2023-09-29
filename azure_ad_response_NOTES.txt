@@ -1,0 +1,81 @@
+/usr/local/bin/python3.11 /Users/scottbianco/Library/CloudStorage/Dropbox/STELLAR/pycharm_projects/stellar_response_4.2.5/modules/saas/azure_ad_responder.py -o 3b8c9244-81cd-42d0-8456-b1b770fe5dc2 -u c2ce62db-6987-4934-9039-917bae9fabc1 -p qbWcrK3Uyue5mJ3dtLbW4aHF6Jbtn6fN0KjIsnF5ua-l4w== -a dismiss_risk -i 674c5aca-2dfc-4aff-a6ed-42458ab4b31a 
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identityProtection/riskyUsers/$entity",
+    "id": "674c5aca-2dfc-4aff-a6ed-42458ab4b31a",
+    "isDeleted": false,
+    "isProcessing": false,
+    "riskLevel": "high",
+    "riskState": "atRisk",
+    "riskDetail": "none",
+    "riskLastUpdatedDateTime": "2022-05-11T09:56:36.1629495Z",
+    "userDisplayName": "ashley",
+    "userPrincipalName": "ashley@aella.onmicrosoft.com"
+}
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identityProtection/riskyUsers/$entity",
+    "id": "674c5aca-2dfc-4aff-a6ed-42458ab4b31a",
+    "isDeleted": false,
+    "isProcessing": true,
+    "riskLevel": "high",
+    "riskState": "atRisk",
+    "riskDetail": "none",
+    "riskLastUpdatedDateTime": "2022-05-11T09:56:36.1629495Z",
+    "userDisplayName": "ashley",
+    "userPrincipalName": "ashley@aella.onmicrosoft.com"
+}
+{'result_msg': 'Azure AD responder action success'}
+
+
+
+after dismissing risk (takes a few seconds)
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identityProtection/riskyUsers/$entity",
+    "id": "674c5aca-2dfc-4aff-a6ed-42458ab4b31a",
+    "isDeleted": false,
+    "isProcessing": false,
+    "riskLevel": "none",
+    "riskState": "dismissed",
+    "riskDetail": "adminDismissedAllRiskForUser",
+    "riskLastUpdatedDateTime": "2023-03-23T20:27:42.4601224Z",
+    "userDisplayName": "ashley",
+    "userPrincipalName": "ashley@aella.onmicrosoft.com"
+}
+
+
+after confirming compromise (takes a few minutes)
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identityProtection/riskyUsers/$entity",
+    "id": "674c5aca-2dfc-4aff-a6ed-42458ab4b31a",
+    "isDeleted": false,
+    "isProcessing": false,
+    "riskLevel": "high",
+    "riskState": "confirmedCompromised",
+    "riskDetail": "adminConfirmedUserCompromised",
+    "riskLastUpdatedDateTime": "2023-03-23T20:38:01.6526082Z",
+    "userDisplayName": "ashley",
+    "userPrincipalName": "ashley@aella.onmicrosoft.com"
+}
+
+
+/usr/local/bin/python3.11 /Users/scottbianco/Library/CloudStorage/Dropbox/STELLAR/pycharm_projects/stellar_response_4.2.5/modules/saas/azure_ad_responder.py -o 3b8c9244-81cd-42d0-8456-b1b770fe5dc2 -u c2ce62db-6987-4934-9039-917bae9fabc1 -p qbWcrK3Uyue5mJ3dtLbW4aHF6Jbtn6fN0KjIsnF5ua-l4w== -a list_risky_users -i 674c5aca-2dfc-4aff-a6ed-42458ab4b31a 
+1ac63149-8bbf-4399-862e-b9068a986e0e paulj@aella.onmicrosoft.com none remediated
+f8a27c0d-35d2-4946-b752-b65a4b7a272f sbianco@aella.onmicrosoft.com medium atRisk
+2f5c2890-0bb5-474e-8ca7-bafe8ae2a07f qa@aella.onmicrosoft.com medium atRisk
+40f00bcd-2346-4f1e-9b31-fff89deaa16c joliva@aella.onmicrosoft.com medium atRisk
+dbfc689c-e3ff-4f56-a79c-979b49682207 jose@aella.onmicrosoft.com low atRisk
+9dfca6de-5678-4a01-8b58-fd0a38fbbe9a ivon@aella.onmicrosoft.com none dismissed
+3306ed14-90d5-4e50-8eef-71b0f588971b kkoenig@aella.onmicrosoft.com low atRisk
+874c8262-3756-4d9e-ac7d-c1b7f50d3fe0 qa2@aella.onmicrosoft.com low atRisk
+1bc9457c-67f6-4d3b-bd08-a6f3b43c7cf4 jgui@aella.onmicrosoft.com medium atRisk
+674c5aca-2dfc-4aff-a6ed-42458ab4b31a ashley@aella.onmicrosoft.com none dismissed
+905929de-e01f-4e84-99af-6c9c02ffa091 ksoon@aella.onmicrosoft.com low atRisk
+f33de92a-7d25-4e6e-b7e1-adbaae44a1af snehal@aella.onmicrosoft.com low atRisk
+13f6aa3a-1018-429e-97f4-8c8176c1daa7 jzhang@aella.onmicrosoft.com medium atRisk
+ea9ec4b0-c28b-43b6-a565-ae031e4e200a tbanerjee@aella.onmicrosoft.com low atRisk
+ec9c9ee7-b269-484b-9caf-03045714be5b jzhang@stellarcyber.cloud none dismissed
+8945456d-b19e-4b36-ac46-dba3e8443c9d dominic@aella.onmicrosoft.com none dismissed
+dcead88c-977f-4397-8230-f41f6a62bb1a defender@aella.onmicrosoft.com none dismissed
+f09b2235-8575-4332-ae1e-5b9bd59e2389 dmillan@aella.onmicrosoft.com medium atRisk
+{'result_msg': 'Azure AD responder action success'}

@@ -1,0 +1,81 @@
+2023-03-30 15:19:59,362|action_agent|INFO|FireEye HX login success
+2023-03-30 15:20:39,662|action_agent|INFO|FireEye HX login success
+2023-03-30 15:20:44,300|action_agent|INFO|FireEye HX login success
+2023-03-30 15:21:07,383|action_agent|INFO|FireEye HX login success
+2023-03-30 15:21:08,214|action_agent|INFO|FireEye HX login success
+2023-03-30 15:21:11,859|action_agent|INFO|FireEye HX login success
+2023-03-31 11:34:35,589|action_agent|INFO|FireEye HX login success
+2023-03-31 11:34:50,284|action_agent|INFO|FireEye HX login success
+2023-03-31 11:36:48,300|action_agent|INFO|FireEye HX login success
+2023-03-31 11:36:48,302|action_agent|INFO|FE Hellix: listing containments
+2023-03-31 11:38:26,494|action_agent|INFO|FireEye HX login success
+2023-03-31 11:38:26,496|action_agent|INFO|FE Hellix: listing containments
+2023-03-31 11:38:26,649|action_agent|INFO|Azure AD responder action success
+2023-03-31 11:38:44,147|action_agent|INFO|FireEye HX login success
+2023-03-31 11:38:44,147|action_agent|INFO|FE Hellix: listing containments
+2023-03-31 11:41:26,900|action_agent|INFO|Azure AD responder action success
+2023-03-31 11:41:33,084|action_agent|INFO|FireEye HX login success
+2023-03-31 11:41:33,085|action_agent|INFO|FE Hellix: listing containments
+2023-03-31 11:41:33,266|action_agent|INFO|Azure AD responder action success
+2023-03-31 11:41:49,699|action_agent|INFO|FireEye HX login success
+2023-03-31 11:41:49,699|action_agent|INFO|FE Hellix: listing containments
+2023-03-31 11:44:29,586|action_agent|INFO|FireEye HX login success
+2023-03-31 11:44:29,587|action_agent|INFO|FE Hellix: listing containments
+2023-03-31 11:44:54,933|action_agent|INFO|Azure AD responder action success
+2023-03-31 11:49:15,391|action_agent|INFO|FireEye HX login success
+2023-03-31 11:49:15,392|action_agent|INFO|FE Hellix: listing containments
+2023-03-31 11:49:15,554|action_agent|INFO|Azure AD responder action success
+2023-03-31 12:02:34,980|action_agent|INFO|FireEye HX login success
+2023-03-31 12:02:34,982|action_agent|INFO|FireEye HX: listing containments
+2023-03-31 12:02:35,151|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:02:58,401|action_agent|INFO|FireEye HX login success
+2023-03-31 12:02:58,403|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:02:58,558|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:03:08,101|action_agent|INFO|FireEye HX login success
+2023-03-31 12:03:08,102|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:04:00,768|action_agent|INFO|FireEye HX login success
+2023-03-31 12:04:00,768|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:04:00,920|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:04:48,084|action_agent|INFO|FireEye HX login success
+2023-03-31 12:04:48,085|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:04:48,239|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:09:46,533|action_agent|INFO|FireEye HX login success
+2023-03-31 12:09:46,535|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:09:46,746|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:10:59,954|action_agent|INFO|FireEye HX login success
+2023-03-31 12:10:59,956|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:11:00,183|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:18:06,901|action_agent|INFO|FireEye HX login success
+2023-03-31 12:18:06,902|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:18:07,082|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:18:29,930|action_agent|INFO|FireEye HX login success
+2023-03-31 12:18:29,930|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:18:30,116|action_agent|ERROR|FireEye HX: responder action error: b'{"details":[{"type":"error","code":50,"message":"State transition failure"}],"route":"/hx/api/v3/hosts/agent_id/containment","message":"Conflict"}'
+2023-03-31 12:20:32,681|action_agent|INFO|FireEye HX login success
+2023-03-31 12:20:32,683|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:20:32,844|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:23:05,876|action_agent|INFO|FireEye HX login success
+2023-03-31 12:23:05,880|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:23:47,451|action_agent|INFO|FireEye HX login success
+2023-03-31 12:23:47,453|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:24:48,463|action_agent|INFO|FireEye HX login success
+2023-03-31 12:24:48,464|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:26:46,959|action_agent|INFO|FireEye HX login success
+2023-03-31 12:26:46,960|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:27:24,289|action_agent|INFO|FireEye HX login success
+2023-03-31 12:27:24,290|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:27:24,464|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:28:47,106|action_agent|INFO|FireEye HX login success
+2023-03-31 12:28:47,106|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:28:47,285|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:34:29,836|action_agent|INFO|FireEye HX login success
+2023-03-31 12:34:29,838|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:34:30,006|action_agent|INFO|FireEye HX: responder action success
+2023-03-31 12:37:29,227|action_agent|INFO|FireEye HX login success
+2023-03-31 12:37:29,229|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:37:29,396|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:39:58,219|action_agent|INFO|FireEye HX login success
+2023-03-31 12:39:58,221|action_agent|INFO|FireEye HX: requesting containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:39:58,392|action_agent|INFO|FireEye HX: listing containment for agent id: [0cvSgsoe5UdfVrBLFDHXdK]
+2023-03-31 12:39:58,510|action_agent|INFO|Azure AD responder action success
+2023-03-31 12:39:58,510|action_agent|INFO|Azure AD responder action success

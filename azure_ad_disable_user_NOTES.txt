@@ -1,0 +1,61 @@
+the required field needed to pass to the azure AD API call to enable or disable the user is
+azure_ad.userPrincipalName
+
+a sample record can be found in the windows index
+msg_origin.source: azure_ad
+
+as an example:
+azure_ad.userPrincipalName: "liz.gonzalez@datawarden.com.mx"
+
+this is passed to the azure_ad_responder
+    parser.add_argument('-i', '--user_principal_name', action='store', dest='user_principal_name', required=True,
+        help="The user principal name or user_id")
+
+the entire stanza
+
+	"azure_ad": {
+		"resourceDisplayName": "Windows Azure Active Directory",
+		"resourceId": "00000002-0000-0000-c000-000000000000",
+		"riskEventTypes": [],
+		"deviceDetail": {
+			"displayName": "DES-LGONZALEZ1",
+			"browser": "Edge 117.0.2045",
+			"trustType": "Azure AD registered",
+			"deviceId": "3dd87ea0-2466-4066-82d7-d68ea19e6ccd",
+			"operatingSystem": "Windows10",
+			"isCompliant": false,
+			"isManaged": false
+		},
+		"appliedConditionalAccessPolicies": [],
+		"appDisplayName": "Microsoft App Access Panel",
+		"isInteractive": true,
+		"riskLevelDuringSignIn": "hidden",
+		"ipAddress": "201.141.109.1",
+		"conditionalAccessStatus": "notApplied",
+		"userDisplayName": "Liz Jeanine Gonzalez",
+		"clientAppUsed": "Browser",
+		"userId": "1ddbd795-c85c-41f9-8b6c-e19f6a0faacf",
+		"riskLevelAggregated": "hidden",
+		"riskDetail": "hidden",
+		"appId": "0000000c-0000-0000-c000-000000000000",
+		"correlationId": "c806b79f-773d-43a7-83cd-d9a7fe9c7b71",
+		"location": {
+			"countryOrRegion": "MX",
+			"city": "Mexico City",
+			"state": "Distrito Federal",
+			"geoCoordinates": {
+				"altitude": null,
+				"latitude": 19.43225,
+				"longitude": -99.13646
+			}
+		},
+		"id": "9a888b7d-13c4-40e0-bade-054e8b7d1900",
+		"riskState": "none",
+		"userPrincipalName": "liz.gonzalez@datawarden.com.mx",
+		"riskEventTypes_v2": [],
+		"status": {
+			"failureReason": "Other.",
+			"errorCode": 0,
+			"additionalDetails": null
+		}
+	},

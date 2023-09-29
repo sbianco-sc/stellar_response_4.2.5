@@ -1,0 +1,69 @@
+2023-03-21 12:28:04,740|action_agent|ERROR|Failed to login azure AD: 'access_token'
+2023-03-21 12:31:41,017|action_agent|INFO|Azure AD responder: start risky user confirm compromise action
+2023-03-21 12:39:26,881|action_agent|INFO|Azure AD responder: start risky user confirm compromise action
+2023-03-21 12:39:46,308|action_agent|ERROR|Azure AD responder action error: b'{"error":{"code":"AccessDenied","message":"You cannot perform the requested operation, required scopes are missing in the token.","innerError":{"date":"2023-03-21T16:39:29","request-id":"ec52bd70-6c3d-40e6-99ed-9d3db54db0aa","client-request-id":"ec52bd70-6c3d-40e6-99ed-9d3db54db0aa"}}}'
+2023-03-21 16:48:33,037|action_agent|INFO|Azure AD responder: start dismiss risk action
+2023-03-21 16:48:48,341|action_agent|INFO|Azure AD responder action success
+2023-03-21 16:50:36,206|action_agent|INFO|Azure AD responder: start risky user confirm compromise action
+2023-03-21 16:50:41,332|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:01:58,529|action_agent|INFO|Azure AD responder: start dismiss risk action
+2023-03-23 16:01:58,910|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:02:56,570|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:05:25,090|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:05:25,365|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:05:46,628|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:06:17,949|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:06:35,618|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:06:54,501|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:07:23,580|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:08:58,173|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:12:04,568|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:12:21,590|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:12:21,868|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:13:53,339|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:15:08,515|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:15:08,750|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:15:15,131|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:15:15,370|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:17:17,822|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:17:18,104|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:20:03,922|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:24:38,917|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:24:39,157|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:24:48,335|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:24:48,601|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:27:41,643|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:27:41,908|action_agent|INFO|Azure AD responder: start dismiss risk action
+2023-03-23 16:27:42,502|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:27:42,726|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:29:17,334|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:30:08,509|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:30:08,739|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:32:00,398|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:36:56,954|action_agent|INFO|Azure AD responder: start risky user confirm compromise action
+2023-03-23 16:36:57,421|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:37:06,768|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:37:14,815|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:37:25,566|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:37:37,698|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:37:54,880|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:40:25,769|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:43:48,787|action_agent|INFO|Azure AD responder: start dismiss risk action
+2023-03-23 16:43:49,344|action_agent|INFO|Azure AD responder action success
+2023-03-23 16:43:57,624|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:44:09,787|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:50:38,794|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-23 16:51:10,582|action_agent|INFO|Azure AD responder: start risky user confirm compromise action
+2023-03-23 16:51:11,027|action_agent|INFO|Azure AD responder action success
+2023-03-24 11:00:26,755|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-24 11:00:27,117|action_agent|INFO|Azure AD responder action success
+2023-03-24 11:00:35,817|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-24 11:00:36,068|action_agent|INFO|Azure AD responder action success
+2023-03-24 11:00:54,896|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-24 11:00:55,135|action_agent|INFO|Azure AD responder action success
+2023-03-24 11:01:02,280|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-24 11:01:02,547|action_agent|INFO|Azure AD responder action success
+2023-03-24 11:01:16,108|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-24 11:01:16,401|action_agent|INFO|Azure AD responder action success
+2023-03-24 11:01:38,512|action_agent|INFO|Azure AD responder: start list risky users
+2023-03-24 11:01:38,811|action_agent|INFO|Azure AD responder action success
